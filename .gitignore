@@ -1,4 +1,4 @@
-# Ignore SQLite database
+# Ignore database
 *.db
 
 # Ignore Python cache and logs
@@ -6,6 +6,11 @@ __pycache__/
 *.pyc
 *.log
 
+# Flask session folders (if applicable)
+flask_session/
+instance/
+
 # Ignore environment files
 .env
+.idea/
 venv/
