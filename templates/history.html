@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+    <h2 class="display-6">History</h2>
+    <br><br>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Transaction ID</th>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Shares</th>
+                    <th scope="col">Stock Price</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Date Time</th>
+                    <th scope="col">Method</th>
+                </tr>
+            <tbody>
+                {% for transaction in transactions %}
+                    <tr>
+                        <td scope="col">{{transaction.id}}</tb>
+                        <td scope="col">{{transaction.symbol}}</tb>
+                        <td scope="col">{{transaction.shares}}</tb>
+                        <td scope="col">{{transaction.price | usd}}</tb>
+                        <td scope="col">{{transaction.total | usd}}</tb>
+                        <td scope="col">{{transaction.datetime}}</tb>
+                        <td scope="col">{{transaction.method}}</tb>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

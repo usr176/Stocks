@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+    <h2 class="display-6">Home</h2>
+    <h5 class="fw-lighter">Welcome, {{user}}</h5>
+    <br><br>
+    <div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Shares</th>
+                    <th scope="col">Stock Price</th>
+                    <th scope="col">Total</th>
+                </tr>
+            <tbody>
+                {% for transaction in transactions %}
+                    <tr>
+                        <td scope="col">{{transaction.symbol}}</td>
+                        <td scope="col">{{transaction.shares}}</td>
+                        <td scope="col">{{transaction.price | usd}}</td>
+                        <td scope="col">{{transaction.total | usd}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="3">Remaining Cash</td>
+                <td class="border-0 text-end">{{cash}}</td>
+            </tr>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="3">
+                    <button class="btn btn-primary" onclick="document.location='/addCash'">Add Cash</button>
+                </td>
+            </tr>
+        </tfoot>
+        </table>
+    </div>
+{% endblock %}

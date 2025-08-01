@@ -1,0 +1,6 @@
+cs50
+Flask~=3.1.1
+Flask-Session
+pytz
+requests~=2.32.4
+Werkzeug~=3.1.3

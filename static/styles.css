@@ -1,0 +1,131 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+.quote-box {
+    background-color: #e7f3ff;
+    border: 1px solid #b6d4fe;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+#search {
+    background-color: #0a58ca;          /* Darker blue */
+    color: #ffffff;                     /* White text */
+    padding: 10px 20px;                 /* Padding around the label */
+    border-radius: 8px;                 /* Rounded corners */
+    font-weight: 600;                   /* Bold text */
+    font-size: 1.2rem;                  /* Slightly larger font */
+    display: inline-block;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main.container {
+  flex: 1;
+  padding-bottom: 40px; /* Avoid touching footer */
+}
+
+/* Footer at the bottom, but not fixed */
+.footer {
+  background-color: #1a1a1a; /* Slight black */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+/* Custom Navbar */
+.custom-navbar {
+  background-color: #1a1a1a !important; /* Same as footer */
+  border-bottom: 2px solid #333;
+}
+
+/* Brand Styling */
+.custom-navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Link Styling */
+.custom-navbar .nav-link {
+  color: white !important;
+  padding: 10px 15px;
+  border-right: 1px solid #444; /* Divider */
+  border-bottom: 3px solid transparent; /* tab bottom border */
+  transition: all 0.2s ease-in-out;
+}
+.custom-navbar .nav-link:last-child {
+  border-right: none;
+}
+
+/* Hover effect */
+.custom-navbar .nav-link:hover {
+  background-color: #302f2f;
+  color: white !important;
+  border-radius: 4px;
+  border-bottom: 3px solid white;
+}
+
+/* nav look like tabs */
+.custom-navbar .nav-item {
+  margin-bottom: -2px;
+}
+.custom-navbar .nav-link.active {
+  border-bottom: 3px solid white;
+  font-weight: 600;
+}
+.custom-navbar .navbar-toggler {
+  border-color: white;
+}
+.custom-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+/* Red button style for Register and Log Out */
+.custom-navbar .nav-link[href="/register"],
+.custom-navbar .nav-link[href="/logout"],
+ .custom-navbar .nav-link[href="/login"]{
+  background-color: #dc3545;  /* Bootstrap red */
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect */
+.custom-navbar .nav-link[href="/register"]:hover,
+.custom-navbar .nav-link[href="/logout"]:hover {
+  background-color: #a71d2a; /* Darker red on hover */
+  text-decoration: none;
+}
