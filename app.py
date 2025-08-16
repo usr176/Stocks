@@ -1,5 +1,3 @@
-
-import os
 import sqlite3
 from contextlib import closing
 from flask import Flask, flash, redirect, render_template, request, session
